@@ -12,7 +12,9 @@ body {
 .container{
     margin: 50px;
     border-style: solid;
-    width: 500px;
+    border: 20px;
+    background-color: dimgrey;
+    width: 300px;
 }
 
 .display h1 {
@@ -24,6 +26,7 @@ body {
 .misc button {
     flex: 1 50%;
     width: 100%;
+    height: 60px;
 }
 
 .btns {
@@ -50,6 +53,10 @@ body {
 
 button {
     padding: auto;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-style: inner 
     width: 100%;
     height: 8em;
 }
