@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: 50px;
+    border-style: solid;
+    width: 500px;
+}
+
+.display h1 {
+    margin: 30px;
+}
+.misc {
+    display: flex;
+}
+.misc button {
+    flex: 1 50%;
+    width: 100%;
+}
+
+.btns {
+    display: flex;
+    width: 100%;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.numbers button {
+    flex: 0 33.3333333333%
+}
+
+.operators{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+button {
+    padding: auto;
+    width: 100%;
+    height: 8em;
+}
+
+
+button.zero {
+    justify-self: flex-start;
+    flex: 1;
+}
