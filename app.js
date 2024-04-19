@@ -1,14 +1,23 @@
 let text = "";
-let tag;
 let input = "";
 let operators = ["+","-","/","x","Enter","Clear"]
+
 const calc = {
     input: [],
     output: 0,
     operator: "",
     calculate: function() {
-        this.input[0] = Number(this.input[0]);
-        this.input[1] = Number(this.input[1]);
+        this.input = this.input.map(str => {
+            if (!isNaN(str)) {
+                str = str.toString();
+            }
+            if (str.startsWith("neg")) {
+                return parseInt(str.slice(3) * -1)
+            } else {
+                return parseInt(str);
+            }
+        });
+
         switch (this.operator) {
             case "+":
                 this.output = this.input[0] + this.input[1];
@@ -24,7 +33,10 @@ const calc = {
             break;
             default:
         }
+
+        this.output = Number(this.output).toFixed(2);
     },
+
     clearCalc: function() {
         this.input = [];
         this.output = "";
@@ -49,21 +61,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 let number = "";
-let ans;
 const display = document.querySelector(".display h1");
     btns.addEventListener("click", (event) => {
         input = event.target.textContent;
         if (event.target.tagName === "BUTTON") {
             if(!operators.includes(input)) {
+                if (calc.operator === "") {
+                    calc.clearCalc();
+                }
                 number += event.target.textContent;
                 display.textContent = number;
                 calc.input[1] = number;
+
             } else {
                 number = "";
                 switch (input) {
                     case "Enter":
                         calc.calculate();
                         display.textContent = calc.output;
+                        calc.operator = "";
+
                     break;
                     case "Clear":
                         calc.clearCalc();
@@ -75,6 +92,7 @@ const display = document.querySelector(".display h1");
                             calc.input[1] = "";
                         } else {
                             calc.calculate();
+                            calc.operator = "";
                             calc.input[0] = calc.output;
                             calc.input[1] = "";
                         }
@@ -84,8 +102,4 @@ const display = document.querySelector(".display h1");
         }
         console.log(calc);
     });
-
-
-
-
 })
