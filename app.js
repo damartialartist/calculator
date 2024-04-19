@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 let number = "";
 const display = document.querySelector(".display h1");
+const op = document.querySelector(".op p");
     btns.addEventListener("click", (event) => {
         input = event.target.textContent;
         if (event.target.tagName === "BUTTON") {
@@ -69,7 +70,9 @@ const display = document.querySelector(".display h1");
                 if (calc.operator === "") {
                     calc.clearCalc();
                 }
-                number += event.target.textContent;
+                if (!((input === '.') && (number.includes('.')))) {
+                    number += event.target.textContent;
+                }
                 display.textContent = number;
                 calc.input[1] = number;
 
@@ -97,6 +100,8 @@ const display = document.querySelector(".display h1");
                             calc.input[1] = "";
                         }
                         calc.operator = input;
+                        op.textContent = input;
+                        
                 }
             }
         }
