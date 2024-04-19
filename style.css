@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-size: 20px;
 }
 body {
     display: flex;
@@ -26,7 +27,7 @@ body {
 .misc button {
     flex: 1 50%;
     width: 100%;
-    height: 60px;
+    height: 50px;
 }
 
 .btns {
@@ -57,7 +58,7 @@ button {
     border-style: solid;
     border-color: black;
     width: 100%;
-    height: 8em;
+    height: 5em;
 }
 
 
