@@ -1,80 +1,79 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 20px;
 }
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-.container{
-    margin: 50px;
-    border-style: solid;
-    border: 20px;
-    background-color: dimgrey;
-    width: 300px;
+.container {
+  margin: 50px;
+  border-style: solid;
+  border: 20px;
+  background-color: dimgrey;
+  width: 300px;
 }
 .display {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .display p {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
-    align-self: center;
-    text-align: center;
-    background-color: white;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  align-self: center;
+  text-align: center;
+  background-color: white;
 }
 .display h1 {
-    margin: 30px;
+  margin: 30px;
 }
 .misc {
-    display: flex;
+  display: flex;
 }
 .misc button {
-    flex: 1 50%;
-    width: 100%;
-    height: 50px;
+  flex: 1 50%;
+  width: 100%;
+  height: 50px;
 }
 
 .btns {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .numbers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 75%;
 }
 
 .numbers button {
-    flex: 0 33.3333333333%
+  flex: 0 33.3333333333%;
 }
 
-.operators{
-    display: flex;
-    flex-direction: column;
-    width: 25%;
+.operators {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
 }
 
 button {
-    padding: auto;
-    background-color: white;
-    border-style: solid;
-    border-color: black;
-    width: 100%;
-    height: 5em;
+  padding: auto;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  width: 100%;
+  height: 5em;
 }
 
-
 button.zero {
-    justify-self: flex-start;
-    flex: 1;
+  justify-self: flex-start;
+  flex: 1;
 }
