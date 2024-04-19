@@ -82,11 +82,13 @@ const op = document.querySelector(".op p");
                     case "Enter":
                         calc.calculate();
                         display.textContent = calc.output;
+                        op.textContent = "";
                         calc.operator = "";
 
                     break;
                     case "Clear":
                         calc.clearCalc();
+                        op.textContent = "";
                         display.textContent = "0";
                     break;
                     default: 
